@@ -1,0 +1,43 @@
+EXECUTION:
+    BATCH_SIZE: 64  # Look Here
+    MODE: train
+    AVAILABLE_GPUS: [1]
+    NUM_WORKERS: 1
+    OUTPUT_DIR: ''
+HEAD:
+    LAYERS: [300, 300] # Look Here
+    NUM_CLASSES: 2
+    LAYER_ACT_FUNC: 'relu'
+    TYPE: linear # Look Here
+DATA:
+    DATASET: EmailDatasetCSV
+    CSV_PATH: /home/peter/data/Phishing_Email.csv
+    TT_TOKENIZER: basic_english
+MODEL:
+    ARCHITECTURE: GatedRecurrentUnit
+NAIVE_NET:
+    EMBED_DIM: 96 # Look Here (EMBED_DIM = dimension after last layer (before head))
+GRU:
+    EMBED_DIM: 96
+    HIDDEN_DIM: 64
+    NUM_LAYERS: 2
+    BI_DIR: False
+LSTM:
+    EMBED_DIM: 96
+    HIDDEN_DIM: 64
+    NUM_LAYERS: 2
+    BI_DIR: False
+    DROPOUT: 0.1
+TRANSFORMER:
+    EMBED_DIM: 96
+    HIDDEN_DIM: 64
+    NUM_LAYERS: 2
+    NHEAD: 1
+    DROPOUT: 0.2
+SOLVER:
+    BASE_LR: 0.02 # Look Here
+    LOSS_FN: CrossEntropyLoss
+    OPTIMIZER: SGD
+    LR_SCHEDULER: ''
+    TOT_EPOCHS: 100 # Look Here
+    WEIGHT_DECAY: 0.0 # Look Here

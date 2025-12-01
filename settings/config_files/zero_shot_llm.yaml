@@ -1,0 +1,62 @@
+EXECUTION:
+    BATCH_SIZE: 16  # Look Here
+    MODE: train
+    AVAILABLE_GPUS: [1]
+    NUM_WORKERS: 2
+    OUTPUT_DIR: ''
+HEAD:
+    LAYERS: [300, 300] # Look Here
+    NUM_CLASSES: 2
+    LAYER_ACT_FUNC: 'relu'
+    TYPE: linear # Look Here
+DATA:
+    DATASET: EmailDatasetCSV
+    CSV_PATH: /home/peter/data/Phishing_Email.csv
+    TT_TOKENIZER: basic_english
+    MAX_SEQ_LEN: 6000
+MODEL:
+    ARCHITECTURE: Transformer
+    CHECKPOINT_PATH: ''
+NAIVE_NET:
+    EMBED_DIM: 96 # Look Here (EMBED_DIM = dimension after last layer (before head))
+GRU:
+    EMBED_DIM: 96
+    HIDDEN_DIM: 64
+    NUM_LAYERS: 2
+    BI_DIR: False
+LSTM:
+    EMBED_DIM: 96
+    HIDDEN_DIM: 64
+    NUM_LAYERS: 2
+    BI_DIR: False
+    DROPOUT: 0.1
+TRANSFORMER:
+    EMBED_DIM: 96
+    HIDDEN_DIM: 64
+    NUM_LAYERS: 2
+    NHEAD: 1
+    DROPOUT: 0.2
+SOLVER:
+    BASE_LR: 0.02 # Look Here
+    LOSS_FN: CrossEntropyLoss
+    OPTIMIZER: SGD
+    LR_SCHEDULER: ''
+    TOT_EPOCHS: 100 # Look Here
+    WEIGHT_DECAY: 0.2 # Look Here
+    CHECKPOINT_PERIOD: 10
+    RESUME: False
+PROMPTED_MODULE:
+    PROMPT_FILE: /home/peter/dev/project_sw/PhishDetect/settings/prompts/phish_detect.txt
+    HISTORY_LEN: 100
+    BACKEND: LLM_Module
+    LLM_CLIENT:
+        HOST: localhost
+        PORT: 8080
+        TIMEOUT: 60
+    LLAMACPP:
+        MODEL_FILE: /home/peter/dev/llama/llama-cpp-models/llama-2-13b-chat.gguf.q4_K_M.bin
+        TEMPERATURE: 0.0
+        MAX_TOKENS: 4096
+        N_GPU_LAYERS: 100
+        STREAM_STDOUT: False
+        N_THREADS: 8

@@ -1,0 +1,47 @@
+# Identifying Phishing Emails 
+
+Your job as an AI assistant is to identify phishing emails. You will only say whether a given email text is phishing or not
+
+## Hints for identifying phishing emails
+1. Phishing emails are emails meant to trick the user into revealing personal information, making unwanted purchases, or sending money.
+2. Emails demanding urgent action or instills fear
+    a. Threats of a negative consequence
+    b. Rushes recipients to act before fully looking at the email
+3. Emails from companies with bad grammar and punctuation
+Most companies would have auto checks for the emails
+4. Emails with greeting that doesn’t fit formality
+    a. Emails between colleagues are usually informal greetings
+    b. Dear wouldn’t be used in informal conversations
+5. Emails with different email addresses with links
+    a. Email address should match the organizations
+    b. Links also should match websites associated of the organization
+6. Emails requesting sensitive data
+    a. Login info and payment credentials
+    b. If it’s from an unknown sender than it likely is trying to steal the sensitive data
+7. Emails with rewards that seem too good to be true
+    a. Emails that incentivize recipients to click on a link for a reward could be a phishing email, especially if it’s unknown
+
+## Rules in Your response
+1. Respond exactly like the following template:
+[start of response]
+The email <CHOICE: [is, is not]> a phishing email.
+[end of response]
+2. Start the response using [start of response], and end it using [end of response]
+3. Do not explain your choice
+
+## Here are a example email and response:
+
+### Example Email:
+email: 're : meeting on feb 8 , 2001 dear mr . nur azmin abu bakar , thanks for your prompt reply . please , let us know how many members of your team will visit enron . i look forward to our meeting on february 8 . vince kaminski azminab @ petronas . com . my on 01 / 02 / 2001 06 : 38 : 33 pm to : vince . j . kaminski @ enron . com , khairuddinbmjaafar @ petronas . com . my , shirley . crenshaw @ enron . com cc : subject : re : meeting on feb 8 , 2001 dear kaminski , happy new year and thank you for the reply . we are honored to have lunch with you and your team however we have another appointment at 2 . 30 p . m . regards vince . j . kaminski @ enron . com on 03 / 01 / 2001 07 : 38 : 19 am to : azminab @ petronas . com . my cc : vince . j . kaminski @ enron . com , shirley . crenshaw @ enron . com subject : meeting on feb 8 , 2001 dear sir , i would like to apologize for the delay in responding to your fax . i was on vacation for the last few days . i shall be honored to meet your delegation on thursday , february 8 at 10 : 00 a . m . please , let me know if you will be free for lunch after the meeting . vince kaminski'
+
+### Example Response:
+[start of response]
+The email is not a phishing email.
+[end of response]
+*** 
+
+Ok, now that I have given you hints about identifying phishing emails, I want you to tell me if the email I am about to give you is a phishing email or not.
+
+Respond by filling in the template only!
+
+Do you understand?
