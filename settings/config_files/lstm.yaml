@@ -11,7 +11,7 @@ HEAD:
     TYPE: linear # Look Here
 DATA:
     DATASET: EmailDatasetCSV
-    CSV_PATH: /home/peter/data/Phishing_Email.csv
+    CSV_PATH: INSERT_PATH_HERE
     TT_TOKENIZER: basic_english
 MODEL:
     ARCHITECTURE: LSTM

@@ -6,7 +6,7 @@ import numpy as np
 import torchtext.data.utils as tt_ut
 import torchtext.vocab as tt_vb
 
-import common.logging as logging
+import PhishDetect.common.logging as logging
 
 log = logging.getlogger(__name__)
 
@@ -109,7 +109,8 @@ class EmailDatasetCSV(torch.utils.data.Dataset):
                     yield self.tokenizer( self.data[i, 0] )
 
             new_vocab = tt_vb.build_vocab_from_iterator(yield_tokens(), specials=["<unk>"])
-
+            new_vocab.set_default_index(new_vocab["<unk>"])
+            
             return new_vocab
 
     

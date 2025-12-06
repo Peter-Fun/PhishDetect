@@ -17,7 +17,7 @@ import os
 import torch
 import yaml
 
-import common.logging as logging
+import PhishDetect.common.logging as logging
 from PhishDetect.tools.train import train
 from PhishDetect.tools.test import test
 from PhishDetect.tools.demo import demo

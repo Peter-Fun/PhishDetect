@@ -2,9 +2,9 @@ import os
 import re
 import torch
 
-import common.logging as logging
+import PhishDetect.common.logging as logging
 import PhishDetect.utils.constants as constants
-import common.io as io
+import PhishDetect.common.io as io
 
 log = logging.getlogger(__name__)
 

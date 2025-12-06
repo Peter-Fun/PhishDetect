@@ -1,0 +1,15 @@
+torch>=1.9.0
+yacs
+einops
+numpy
+pandas
+scikit-learn
+transformers
+
+[dev]
+pytest
+black
+flake8
+
+[wandb]
+wandb

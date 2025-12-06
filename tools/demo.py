@@ -25,7 +25,7 @@ def demo(cfg):
             while inputted != "":
                 inputted = input(": ")
                 user_input += inputted + "\n"
-            sequence = torch.tensor(vocab(tokenizer(user_input))).cuda()
+            sequence = torch.tensor(vocab(tokenizer(user_input)), dtype = torch.long).cuda()
             sequence = sequence.unsqueeze(0)
             probs = model(sequence, torch.tensor(len(sequence[0])).unsqueeze(0))
             print(probs)

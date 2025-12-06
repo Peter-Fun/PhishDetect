@@ -21,19 +21,6 @@ if spec is not None:
 else:
     USE_WANDB = False
     log.debug(f'Unable to find Weights and Biases installation. Try `pip install wandb`.')
-    
-
-"""
-This file contains the code to train the model. Use all of the PyTorch fundamentals so far to
-implement the training loop! As a reminder, we need to:
-
-- build the model
-- build the dataset and dataloader
-- iterate through the minibatches
-- calculate the loss & perform gradient descent.
-- train for many epochs
-"""
-
 
 def train(cfg):
     """
